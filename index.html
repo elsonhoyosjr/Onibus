@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="manifest" href="https://macaense-horarios-elson.cosmiccrab16.chatgpt.site/manifest.webmanifest"><link rel="icon" href="https://macaense-horarios-elson.cosmiccrab16.chatgpt.site/icon.svg"><meta name="theme-color" content="#123b32"><meta name="description" content="Horários de saída, itinerários e tarifas da Macaense em uma consulta simples para celular."><title>Meu Ônibus • Macaense</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f5ef;color:#173a31;font-family:system-ui,sans-serif}header{background:#123b32;color:white;padding:26px 22px 40px}header>div,main,footer{max-width:900px;margin:auto}.eyebrow{font-size:12px;letter-spacing:1.5px}h1{font-size:clamp(30px,6vw,48px);margin:16px 0 8px;letter-spacing:-1.5px}header p{color:#c9dfd3;max-width:520px;line-height:1.6}.brand{display:flex;justify-content:space-between;align-items:center;gap:12px}.badge{padding:8px 12px;border:1px solid #63897c;border-radius:30px;font-size:12px}main{padding:0 18px;margin-top:-20px}section{background:white;border:1px solid #dce4d8;border-radius:20px;padding:22px;margin-bottom:18px;box-shadow:0 6px 25px #173a3105}label{display:block;font-size:13px;font-weight:650;margin:0 0 8px}input,select,button{font:inherit;border:1px solid #c8d5cc;border-radius:12px;padding:13px;max-width:100%}input,select{width:100%;background:#fbfcf9;color:#173a31}button{cursor:pointer;background:white;color:#173a31;min-height:46px}button:hover{background:#e9f1e9}button:disabled{opacity:.6;cursor:default}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #dcad43;outline-offset:3px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}#routes{display:grid;gap:10px;margin-top:16px}.route{display:flex;text-align:left;align-items:center;gap:12px;width:100%}.route span{flex:1}.route em{font-size:12px;font-style:normal;color:#526c5f}.route.selected{background:#e8f2e8;border-color:#618d74}.num{background:#123b32;color:white;padding:10px;border-radius:10px;min-width:62px;text-align:center;font-size:13px}h2{font-size:23px;letter-spacing:-.5px;margin:0}h3{font-size:17px;margin:22px 0 12px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:10px;margin-top:18px}.time{padding:14px 10px;border:1px solid #e0e7db;border-radius:12px;background:#f1f5ed;text-align:center;list-style:none}.time strong{display:block;font-size:22px;font-weight:700;letter-spacing:-.5px}.time small{display:block;font-size:11px;color:#586d60;margin-top:4px}.time.past{background:#f7f8f4;color:#768275}.time.next{background:#173f32;color:white;border-color:#173f32}.time.next small{color:#dae6c5}.note{font-size:13px;color:#546b5c;line-height:1.65}.status{font-size:13px;color:#526b5d;line-height:1.6;margin:12px 0 0}.warn{color:#80551f}.empty{padding:20px 0;color:#526c5c;line-height:1.6}a{color:inherit}details{border-top:1px solid #e1e7de;padding-top:18px;margin-top:22px}summary{cursor:pointer;font-weight:650;min-height:34px}.stops{padding-left:24px;line-height:1.9;font-size:14px}footer{padding:12px 22px 35px;font-size:12px;color:#5d7061;line-height:1.8}.chips{display:flex;gap:8px;margin-top:15px;flex-wrap:wrap}.active{background:#123b32!important;color:white}.hidden,[hidden]{display:none!important}.next-box{padding:18px 20px;border-radius:16px;background:#edf3df;margin-top:20px;display:flex;align-items:center;justify-content:space-between;gap:12px}.next-box .label{font-size:12px;letter-spacing:1px;font-weight:650}.next-box strong{display:block;font-size:32px;letter-spacing:-1px;margin:4px 0}.next-box p{font-size:13px;margin:4px 0;line-height:1.5}.next-box .next-icon{font-size:28px;background:#dce8c4;padding:15px;border-radius:50%}.filterbar{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.check{display:flex;gap:10px;align-items:center;margin:0;align-self:end;min-height:48px;line-height:1.4;cursor:pointer}.check input{width:20px;height:20px;accent-color:#173f32;flex-shrink:0}.info{border-left:3px solid #92ab65;padding:10px 14px;background:#f6f8ef;border-radius:8px}.legend{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12px;margin-top:16px;color:#546b5c}.dot{width:7px;height:7px;display:inline-block;border-radius:50%;background:#173f32;margin-right:5px}.dot.calc{background:#a2b883}.toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:12px;flex-wrap:wrap}.count{font-size:12px;color:#526c5c;margin:12px 0 0}.fare-list{padding:0;list-style:none}.fare-list li{padding:10px 0;border-bottom:1px solid #edf0e8}.live-clock{font-size:12px;color:#567040}.skeleton{min-height:64px;border-radius:12px;background:#edf1e8;padding:22px;color:#526c5c}#detail{scroll-margin-top:16px}#star{min-width:48px;font-size:22px}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:540px){.grid{grid-template-columns:1fr;gap:14px}section{padding:18px}header{padding-top:22px}.badge{font-size:10px}h2{font-size:20px}.route em{display:none}.times{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.time strong{font-size:21px}.filterbar{grid-template-columns:1fr}.next-box{padding:16px}.next-box .next-icon{display:none}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+:root{color-scheme:light}header{padding-bottom:40px}header .eyebrow{margin-top:18px!important}header h1{font-size:clamp(27px,5vw,40px);margin-top:10px}header p{margin-bottom:8px}.connection-note{max-width:900px;margin:12px auto 32px;padding:0 18px;font-size:12px;color:#526b5d}main{margin-top:-20px}.route small{display:block;font-size:11px;color:#526c5f;font-weight:400;margin-top:4px}.route span{min-width:0;font-size:14px;line-height:1.4}.route .num{flex-shrink:0}.detail-actions,.offline-actions,.filter-summary{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}.detail-actions button{font-size:13px;padding:10px 12px}.offline-link{padding:12px 14px;border:1px solid #c8d5cc;border-radius:12px;font-size:13px;text-decoration:none;min-height:46px;display:inline-flex;align-items:center}.filter-summary{justify-content:space-between;margin-top:12px}.filter-summary button{font-size:12px;padding:9px 12px}.ambiguous{border-style:dashed!important;background:#fff6e3!important;color:#765728!important}.toast{max-width:900px;margin:auto;padding:0 22px;overflow-wrap:anywhere;font-size:13px}.search-card .status{border-top:1px solid #e1e7de;padding-top:14px}#schedule-note{font-size:12px}#legend{line-height:1.5}input[type=search]{font-size:16px}#title{min-width:0;overflow-wrap:anywhere}#star{flex-shrink:0}.stops{overflow-wrap:anywhere}button,a{-webkit-tap-highlight-color:transparent}#direction,#day{font-size:15px}.search-card{scroll-margin-top:12px}@media(min-width:700px){#routes{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){header{padding:20px 18px 34px}header .eyebrow{display:none}header h1{font-size:27px}header p{font-size:13px}.connection-note{font-size:11px;margin-top:10px;margin-bottom:28px}.badge{padding:6px 8px}section{padding:16px}.search-card #routes{display:flex;overflow-x:auto;scroll-snap-type:x proximity;gap:10px;padding-bottom:6px}.search-card .route{flex:0 0 245px;scroll-snap-align:start;align-items:flex-start}.route .num{padding:9px 8px;min-width:56px}.route span{font-size:13px}.detail-actions button{flex:1}.top{align-items:flex-start}#detail h2{font-size:19px}.times{grid-template-columns:repeat(3,minmax(0,1fr))}.time{padding:12px 4px}.time strong{font-size:21px}.next-box strong{font-size:36px}.filter-summary .note{font-size:11px}.filter-summary{gap:8px}.offline-link{width:100%;justify-content:center}.grid{grid-template-columns:1fr;gap:12px}}@media(max-width:340px){.badge{display:none}.times{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-actions{flex-direction:column;align-items:stretch}}
+
+</style>
+</head>
+<body>
+<header><div><div class="brand"><strong>◉ MEU ÔNIBUS</strong><span class="badge">MACAENSE · REGIÃO DOS LAGOS</span></div><div class="eyebrow" style="margin-top:30px">SUA PRÓXIMA VIAGEM COMEÇA AQUI</div><h1>Consulte. Planeje. Embarque.</h1><p>Cada saída no seu horário. Encontre a linha, escolha o sentido e planeje sua viagem no celular.</p></div></header>
+<div class="connection-note">Programação divulgada pela empresa · Sem rastreamento em tempo real</div><main>
+<section aria-label="Busca de linhas" class="search-card"><label for="search">Encontre sua linha</label><input id="search" type="search" placeholder="Linha, cidade ou local do itinerário" autocomplete="off"><div class="chips" role="group" aria-label="Linhas exibidas"><button id="all" class="active" aria-pressed="true">Todas as linhas</button><button id="favs" aria-pressed="false">★ Favoritas</button></div><p id="result-count" class="count"></p><div id="routes" role="group" aria-label="Selecionar linha" aria-live="polite"><div class="skeleton">Consultando os horários da empresa…</div></div><p id="status" class="status" role="status"></p><div class="toolbar"><button id="refresh">↻ Atualizar consulta</button><a href="https://www.macaense.com.br/linhas-urbanas" target="_blank" rel="noopener" class="note">Conferir na fonte ↗</a></div></section>
+<section id="detail" hidden aria-label="Detalhes da linha"><div class="top"><h2 id="title" tabindex="-1"></h2><button id="star" aria-label="Favoritar linha" aria-pressed="false">☆</button></div><div class="detail-actions"><button type="button" id="reverse">⇄ Inverter sentido</button><button type="button" id="share">Compartilhar consulta ↗</button></div><div class="grid"><div><label for="direction">Sentido da viagem</label><select id="direction"></select></div><div><label for="day">Dia da programação</label><select id="day"><option value="today">Hoje</option><option value="weekday">Segunda a sexta</option><option value="sat">Sábado</option><option value="sun">Domingo</option><option value="holiday">Feriado</option></select></div></div><p class="note">Em feriados, selecione “Feriado” acima. A programação de feriados só aparece quando informada pela empresa.</p>
+<div id="next-box" class="next-box" aria-live="polite"><div><div id="next-label" class="label"></div><strong id="next-time"></strong><p id="next-desc"></p><span id="clock" class="live-clock"></span></div><span class="next-icon" aria-hidden="true">↗</span></div>
+<div class="top"><h3>Horários de saída</h3><span id="total-count" class="count"></span></div>
+<div class="filterbar"><div><label for="period">Período</label><select id="period"><option value="all">Todos os períodos</option><option value="dawn">Madrugada · 00h às 05h59</option><option value="morning">Manhã · 06h às 11h59</option><option value="afternoon">Tarde · 12h às 17h59</option><option value="night">Noite · 18h às 23h59</option></select></div><label class="check" for="upcoming"><input id="upcoming" type="checkbox">Ocultar horários que já passaram hoje</label></div>
+<div class="filter-summary"><button type="button" id="clear-filters">Limpar filtros</button><span class="note">Horários individuais no ponto inicial</span></div><div id="schedule" aria-live="polite"></div><p id="schedule-note" class="note info" hidden></p><div id="legend" class="legend" hidden><span><i class="dot" aria-hidden="true"></i>Publicado: horário fixo da empresa</span><span><i class="dot calc" aria-hidden="true"></i>Calculado: derivado da frequência</span></div>
+<p class="note">Saídas do ponto inicial, no horário de Brasília. A passagem em pontos intermediários depende do trajeto e do trânsito.</p>
+<details><summary>Ver faixas e programação originais da empresa</summary><ul id="raw-schedule" class="stops note"></ul></details><details><summary>Ver itinerário deste sentido</summary><ol id="stops" class="stops"></ol></details><details><summary>Ver tarifas publicadas</summary><ul id="fares" class="fare-list note"></ul></details></section>
+<section><h3 style="margin:0 0 12px">Atualização e consulta offline</h3><p id="update-status" class="note" role="status"></p><p class="note">A rotina diária verifica a fonte às <strong>03h (Brasília)</strong>, valida os dados e conserva a última cópia válida se a consulta falhar. Ao abrir o aplicativo com internet, você recebe a programação salva mais recente.</p><div class="offline-actions"><a class="offline-link" href="https://macaense-horarios-elson.cosmiccrab16.chatgpt.site/horarios_macaense.html" download="horarios_macaense.html">↓ Salvar arquivo para consulta offline</a><button type="button" id="install" hidden>Adicionar ao celular</button></div><p class="note">Após a primeira abertura online, o aplicativo também pode ser aberto sem conexão neste navegador. A cópia offline mostra a data da última consulta; recebe novos dados quando voltar a ter internet.</p><details><summary>Como colocar na tela inicial do Android</summary><p class="note">No Chrome, abra o menu ⋮ e selecione “Adicionar à tela inicial” ou “Instalar aplicativo”, quando disponível.</p></details></section><section><div class="top"><div><h3 style="margin:0 0 8px">Direto da fonte</h3><p class="note" style="margin:0">Consulte avisos e alterações no site da empresa.</p></div><a class="badge" href="https://www.macaense.com.br/linhas-urbanas" target="_blank" rel="noopener">Site oficial ↗</a></div></section>
+</main>
+<p id="toast" class="toast" role="status" aria-live="polite"></p><footer>Consulta independente, sem vínculo com a Macaense. Horários programados, sujeitos a alterações.<br>Para abrir pelo ícone do celular, use “Adicionar à tela inicial” no navegador.</footer>
+<script id="embedded-data" type="application/json">{"schemaVersion":2,"routes":[{"id":"B432","name":"B432 - CARAPEBUS X CABO FRIO","lines":["SENTIDO CABO FRIO","Segunda a sexta: 05h30","Sábado: não roda","Domingo: não roda","CARAPEBUS PONTO FINAL","UBÁS","CABIÚNAS MACAÉ","CENTRO DE CONVEÇÕES DE MACAÉ","ATACADÃO MACAÉ","ESTÁDIO CLAUDIO MOACYR DE AZEVEDO","PREFEITURA DE MACAÉ","TERMINAL RODOVIÁRIO DE MACAÉ","PETROBRÁS, PARQUE DE TUBOS","RIO DAS OSTRAS","BARRA DE SÃO JOÃO","UNAMAR","SÃO PEDRO DA ALDEIA","TERMINAL RODOVIÁRIO DE CABO FRIO","SENTIDO CARAPEBUS","Segunda a sexta: 18h00","Sábado: não roda","Domingo: não roda","TERMINAL RODOVIÁRIO DE CABO FRIO","SÃO PEDRO DA ALDEIA","UNAMAR","BARRA DE SÃO JOÃO","RIO DAS OSTRAS","PARQUE DE TUBOS","TERMINAL RODOVIÁRIO DE MACAÉ","PREFEITURA DE MACAÉ","ESTÁDIO CLAUDIO MOACYR DE AZEVEDO","ATACADÃO MACAÉ","CENTRO DE CONVEÇÕES DE MACAÉ","CABIÚNAS MACAÉ","UBÁS","CARAPEBUS PONTO FINAL","VALORES","CABO FRIO - CARAPEBUS R$ 48,40","RIO DAS OSTRAS - CARAPEBUS R$ 41,65","BARRA DE SÃO JOÃO - CARAPEBUS R$ 24,05","SÃO PEDRO DA ALDEIA - CARAPEBUS R$ 42,65","BARRA DE SÃO JOÃO - MACAÉ R$1 6,35","SÃO PEDRO DA ALDEIA - MACAÉ R$ 30,65","CABO FRIO - MACAÉ R$ 36,65","SÃO PEDRO DA ALDEIA - RIO DAS OSTRAS R$ 18,05","CABO FRIO - RIO DAS OSTRAS R$ 24,10","SÃO PEDRO DA ALDEIA - BARRA DE SÃO JOÃO R$ 14,30","CABO FRIO - BARRA DE SÃO JOÃO R$ 19,95","MAR DO NORTE - CARAPEBUS R$ 17,70","CABO FRIO - UNAMAR R$ 18,05","SÃO PEDRO DA ALDEIA - CAMPOS NOVOS R$ 7,20","UNAMAR - MACAÉ R$ 18,60"]},{"id":"B130","name":"B130 - CABO FRIO X MACAÉ","lines":["SAINDO DE MACAÉ","Segunda a sexta:","06h15","09h15","12h15","18h30","Sábado: não opera","Domingo: não opera","TERMINAL RODOVIÁRIO DE MACAÉ (PONTO INICIAL)","RODOVIA RJ 106 MACAÉ","RODOVIA RJ 140 SÃO PEDRO DA ALDEIA","RODOVIA RJ 140 CABO FRIO","TERMINAL RODOVIÁRIO DE CABO FRIO CABO FRIO PONTO FINAL - CABO FRIO","SAINDO DE CABO FRIO","Segunda a sexta:","06h20","09h20","12h15","15:00","Sábado: não opera","Domingo: não opera","TERMINAL RODOVIÁRIO DE CABO FRIO CABO FRIO PONTO INICIAL - CABO FRIO","RODOVIA RJ 140 CABO FRIO","RODOVIA RJ 140 SÃO PEDRO DA ALDEIA","RODOVIA RJ 106 MACAÉ","TERMINAL RODOVIÁRIO DE MACAÉ (PONTO FINAL)","VALORES","CABO FRIO - MACAÉ R$ 36,65","SÃO PEDRO DA ALDEIA - MACAÉ R$ 30,65","SÃO PEDRO DA ALDEIA - RIO DAS OSTRAS R$ 18,05","CABO FRIO - RIO DAS OSTRAS R$ 24,10","BARRA DE SÃO JOÃO - MACAÉ R$ 16,35","CABO FRIO - UNAMAR R$ 18,05","CABO FRIO - BARRA DE SÃO JOÃO R$ 19,95","UNAMAR - MACAÉ R$ 18,60","SÃO PEDRO DA ALDEIA - BARRA DE SÃO JOÃO R$ 14,30","CAMPOS NOVOS - RIO DAS OSTRAS R$ 6,20","SÃO PEDRO DA ALDEIA - CAMPOS NOVOS R$ 7,20"]},{"id":"SELETIVO","name":"CABO FRIO X MACAÉ - Seletivo","lines":["SAINDO DE CABO FRIO","Segunda a Sexta","04:00 às 05:00","(a cada 20min)","05:00 às 06:00","(a cada 15min)","06:00 às 07:00","(a cada 20min)","07:00 às 08:00","(a cada 30min)","08:00 às 15:00","(a cada 20min)","15:00 às 17:30","(a cada 30min)","18:30 às 19:00","(a cada 30min)","19:00 às 19:40","(a cada 40min)","19:40 às 22:40","(a cada 60min)","Sábado:","04:45 às 16:00","(a cada 45min)","16:00 às 19:00","(a cada 60min)","19:00 às 22:00","(a cada 90min)","Domingo e feriado:","05:00 às 19:00","(a cada 60min)","19:00 às 22:00","(a cada 90min)","TERMINAL RODOVIÁRIO DE CABO FRIO (PONTO INICIAL)","RODOVIA RJ 140 - CABO FRIO","RODOVIA RJ 140 - SÃO PEDRO DA ALDEIA","RODOVIA RJ 106 - MACAÉ","TERMINAL RODOVIÁRIO DE MACAÉ (PONTO FINAL)","SAINDO DE MACAÉ","Segunda a sexta:","05:00 às 18:00","(a cada 20min)","18:00 às 19:00","(a cada 15min)","19:00 às 21:00","(a cada 40min)","21:00 às 22:00","(a cada 60min)","23:30","01:20","Sábado:","05:30 às 16:00","(a cada 45min)","16:00 às 20:00","(a cada 60min)","20:00 às 23:00","(a cada 90min)","01:20","Domingo/Feriado:","06:00 às 20:00","(a cada 60min)","20:00 às 23:00","(a cada 90min)","01:20","TERMINAL RODOVIÁRIO DE MACAÉ (PONTO INICIAL)","RODOVIA RJ 106 - MACAÉ","RODOVIA RJ 140 - SÃO PEDRO DA ALDEIA","RODOVIA RJ 140 - CABO FRIO","TERMINAL RODOVIÁRIO DE CABO FRIO (PONTO FINAL)","VALORES","CABO FRIO - MACAÉ R$ 37,55","CABO FRIO - RIO DAS OSTRAS R$ 24,65","UNAMAR - MACAÉ R$ 19,05","UNAMAR - CABO FRIO R$ 18,50"]},{"id":"B434","name":"B434 - MACAÉ X UNAMAR","lines":["SAINDO DE UNAMAR","Segunda a sexta:","03:30","04:20 às 05:00","(a cada 20mim)","05:00 às 06:00","(a cada 15mim)","06:00 às 07:20","(a cada 20min)","07:20 às 08:15","(a cada 55 min)","08:15 às 18:15","(a cada 60min)","19:30","Sábado:","não opera","Domingo/Feriado: não opera.","TERMINAL UNAMAR - VERÃO VERMELHO (PONTO INICIAL)","RJ106 - BARRA DE SÃO JOÃO","RJ106 - RIO DAS OSTRAS","RJ106 - MACAÉ","TERMINAL RODOVIÁRIO DE MACAÉ (PONTO FINAL)","SAINDO DE MACAÉ","Segunda a sexta:","05:15 às 07:15","(a cada 60min)","07:15 às 07:45","(a cada 30min)","07:45 às 15:45","(a cada 60min)","15:45 às 18:05","(a cada 20min)","18:05 às 18:50","(a cada 45min)","18:50 às 19:20","(a cada 30min)","19:20 às 20:40","(a cada 40min)","21:45","Sábado: não opera","Domingo/Feriado: não opera","TERMINAL RODOVIÁRIO DE MACAÉ (PONTO INICIAL)","RJ106 - MACAÉ","RJ106 - RIO DAS OSTRAS","RJ106 - BARRA DE SÃO JOÃO","TERMINAL UNAMAR - VERÃO VERMELHO (PONTO FINAL)","VALORES","UNAMAR - MACAÉ R$ 18,60","BARRA DE SÃO JOÃO - MACAÉ R$ 16,35","RIO DAS OSTRAS - MACAÉ R$ 12,55","IMBOASSICA - BARRA DE SÃO JOÃO R$ 10,95","IMBOASSICA - UNAMAR R$ 14,70","UNAMAR - RIO DAS OSTRAS R$ 5,40"]},{"id":"B135","name":"B135 - MACAÉ X RIO BONITO (via BR-101/Rocha Leão)","lines":["SAINDO DE MACAÉ","Segunda a sexta:","17:20","19:00","Sábado:","19:00","Domingo: Não Opera","TERMINAL RODOVIÁRIO DE MACAÉ (PONTO INICIAL)","RODOVIA RJ 168 - MACAÉ","RODOVIA BR 101 - CASIMIRO DE ABREU","TERMINAL RODOVIÁRIO DE CASIMIRO DE ABREU","RODOVIA BR 101 - CASIMIRO DE ABREU","TERMINAL RODOVIÁRIO DE RIO BONITO (PONTO FINAL)","SAINDO DE RIO BONITO","Segunda a sexta:","04:30","06:00","Sábado:","06:00","Domingo: Não Opera","TERMINAL RODOVIÁRIO DE RIO BONITO (PONTO INICIAL)","RODOVIA BR 101 - CASIMIRO DE ABREU","TERMINAL RODOVIÁRIO DE CASIMIRO DE ABREU","RODOVIA BR 101 - CASIMIRO DE ABREU","RODOVIA RJ 168 - MACAÉ","TERMINAL RODOVIÁRIO DE MACAÉ (PONTO FINAL)","VALORES","RIO BONITO - MACAÉ R$ 49,05","ROCHA LEÃO - MACAÉ R$ 12,90","RIO DOURADO - MACAÉ R$ 16,60","CASIMIRO DE ABREU - MACAÉ R$ 23,65","BELVEDERE - MACAÉ R$ 37,10","CASIMIRO DE ABREU - ROCHA LEÃO R$ 10,75","BELVEDERE - ROCHA LEÃO R$ 24,20","RIO BONITO - ROCHA LEÃO R$ 36,15","BELVEDERE - CASIMIRO DE ABREU R$ 13,45","RIO BONITO - CASIMIRO DE ABREU R$ 25,40","RIO BONITO - PECLAS R$ 18,60","PECLAS - CASIMIRO DE ABREU R$ 6,75","BELVEDERE - PECLAS R$ 6,70","RIO DOURADO - ROCHA LEÃO R$ 6,20"]},{"id":"B137","name":"B137 - MACAÉ X RIO BONITO (VIA RIO DAS OSTRAS/SILVA JARDIM)","lines":["SAINDO DE MACAÉ","Segunda a sexta:","07:00","11:00","15:00","16:20","Sábado: Não Opera","Domingo: Não Opera","TERMINAL RODOVIÁRIO DE MACAÉ MACAÉ PONTO INICIAL - MACAÉ","RODOVIA RJ 168 MACAÉ","TERMINAL RIO DAS OSTRAS RIO DAS OSTRAS PONTO","RODOVIA RJ 106 RIO DAS OSTRAS","RODOVIA RJ 162 CASIMIRO DE ABREU","RODOVIA BR 101 CASIMIRO DE ABREU","TERMINAL RODOVIÁRIO DE CASIMIRO DE ABREU CASIMIRO DE ABREU PONTO","RODOVIA BR 101 CASIMIRO DE ABREU","RODOVIA BR 101 SILVA JARDIM","TERMINAL RODOVIÁRIO DE RIO BONITO RIO BONITO PONTO FINAL - RIO BONITO","SAINDO DE RIO BONITO","Segunda a sexta:","04:45","10:00","14:00","18:00","Sábado: Não Opera","Domingo: Não Opera","TERMINAL RODOVIÁRIO DE RIO BONITO RIO BONITO PONTO INICIAL - RIO BONITO","RODOVIA BR 101 SILVA JARDIM","RODOVIA BR 101 CASIMIRO DE ABREU","TERMINAL RODOVIÁRIO DE CASIMIRO DE ABREU CASIMIRO DE ABREU PONTO","RODOVIA BR 101 CASIMIRO DE ABREU","RODOVIA RJ 162 CASIMIRO DE ABREU","RODOVIA RJ 106 RIO DAS OSTRAS","TERMINAL RIO DAS OSTRAS RIO DAS OSTRAS PONTO","RODOVIA RJ 106 MACAÉ","TERMINAL RODOVIÁRIO DE MACAÉ MACAÉ PONTO FINAL - MACAÉ","VALORES","RIO BONITO - MACAÉ R$ 56,85","RIO DAS OSTRAS - MACAÉ R$ 12,55","RIO DOURADO - MACAÉ R$ 19,00","CASIMIRO DE ABREU - MACAÉ R$ 26,15","SILVA JARDIM - MACAÉ R$ 42,10","SILVA JARDIM - RIO DAS OSTRAS R$ 29,85","RIO BONITO - RIO DAS OSTRAS R$ 43,45","SILVA JARDIM - RIO DOURADO R$ 23,15","RIO BONITO - RIO DOURADO R$ 35,10","PECLAS - CASIMIRO DE ABREU R$ 6,75","SILVA JARDIM - CASIMIRO DE ABREU R$ 15,95","RIO BONITO - CASIMIRO DE ABREU R$ 30,75","SILVA JARDIM - PECLAS R$ 9,35","RIO BONITO - PECLAS R$ 23,95","CASIMIRO DE ABREU - RIO DAS OSTRAS R$ 13,90","CASIMIRO DE ABREU - RIO DOURADO R$ 6,20","RIO DOURADO - RIO DAS OSTRAS R$ 7,50"]},{"id":"B132","name":"B132 - MACAÉ X BÚZIOS","lines":["SAINDO DE BÚZIOS","Segunda a sexta: 05h","Sábado: Não Opera","Domingo: Não Opera","TERMINAL RODOVIÁRIO DE BÚZIOS (PONTO INICIAL)","AV. JOSÉ BENTO RIBEIRO DANTAS - BÚZIOS","ESTRADA DOS BÚZIOS - RJ 102","RODOVIA AMARAL PEIXOTO - RJ 106 - UNAMAR","RODOVIA AMARAL PEIXOTO - RJ 106 - BARRA DE SÃO JOÃO","RODOVIA AMARAL PEIXOTO - RJ 106 -","RIO DAS OSTRAS RODOVIA AMARAL PEIXOTO - RJ 106 -","MACAÉ TERMINAL RODOVIÁRIO DE MACAÉ (PONTO FINAL)","SAINDO DE MACAÉ","Segunda a sexta: 17h15","Sábado: Não Opera","Domingo: Não Opera","TERMINAL RODOVIÁRIO DE MACAÉ (PONTO INICIAL)","RODOVIA AMARAL PEIXOTO - RJ 106 - MACAÉ","RODOVIA AMARAL PEIXOTO - RJ 106 - RIO DAS OSTRAS","RODOVIA AMARAL PEIXOTO - RJ 106 - BARRA DE SÃO JOÃO","RODOVIA AMARAL PEIXOTO - RJ 106 - UNAMAR","ESTRADA DOS BÚZIOS - RJ 102","AV. JOSÉ BENTO RIBEIRO DANTAS - BÚZIOS","TERMINAL RODOVIÁRIO DE BÚZIOS (PONTO FINAL)","VALORES","MACAÉ - BÚZIOS R$ 32,00","MACAÉ - UNAMAR R$ 18,60","RIO DAS OSTRAS - BÚZIOS R$ 20,10","BARRA DE SÃO JOÃO - BÚZIOS R$ 15,65"]}],"source":"https://www.macaense.com.br/linhas-urbanas","hash":"46fd4248260121f934d56b4f8915456b0a00f361c43cc6b8435865c9e10e7c9d","checkedAt":"2026-10-11T19:56:59.196Z","changedAt":"2026-10-11T19:54:46.739Z","lastRunDate":"2026-10-11","changedRoutes":[],"persisted":true,"live":false}</script>
+<script>
+const SOURCE = 'https://www.macaense.com.br/linhas-urbanas';
+function decodeEntity(entity) {
+  const known = { amp:'&', quot:'"', apos:"'", lt:'<', gt:'>', nbsp:' ' };
+  const token = entity.slice(1, -1);
+  if (token.startsWith('#')) { const code = token.startsWith('#x') ? parseInt(token.slice(2), 16) : parseInt(token.slice(1), 10); return Number.isFinite(code) && code >= 0 && code <= 0x10ffff ? String.fromCodePoint(code) : entity; }
+  return known[token] ?? entity;
+}
+function clean(html) {
+  return html.replace(/<\/(?:p|td|tr)>/gi, '\n').replace(/<br\s*\/?\s*>/gi, '\n').replace(/<[^>]*>/g, '').replace(/&(?:#x[0-9a-f]+|#\d+|amp|quot|apos|lt|gt|nbsp);/gi, decodeEntity).split('\n').map(line => line.replace(/\s+/g, ' ').trim()).filter(Boolean);
+}
+function parse(html) {
+  const blocks = html.split(/<li\b[^>]*class=["'][^"']*\bcollapse-item-external\b[^"']*["'][^>]*>/i).slice(1);
+  const routes = blocks.map((block, index) => ({
+    id: String(index),
+    name: clean((block.match(/<a[^>]*>([\s\S]*?)<\/a>/i) || [])[1] || '').join(' '),
+    lines: [...block.matchAll(/<div\b[^>]*class=["'](?:text-paragraph|content-text)["'][^>]*>([\s\S]*?)<\/div>/gi)].flatMap(match => clean(match[1]))
+  }));
+  routes.forEach(route => { route.id = routeId(route); });
+  if (!routes.length || routes.some(route => !route.name || !route.lines.length || splitRoute(route).directions.length < 2)) throw Error('Estrutura da fonte não reconhecida');
+  return routes;
+}
+
+const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+const routeId = route => route.name.match(/^B\d+\b/i)?.[0].toUpperCase() || (normalize(route.name).includes('seletivo') ? 'SELETIVO' : 'LINHA-' + normalize(route.name).replace(/[^a-z0-9]+/g, '-'));
+const clockLabel = minute => String(Math.floor(minute / 60) % 24).padStart(2, '0') + ':' + String(minute % 60).padStart(2, '0');
+function splitRoute(route) {
+  const directions = [], fares = [];
+  let direction = null, days = [], inFares = false;
+  for (const line of route.lines) {
+    const text = normalize(line);
+    if (/^valores\b/.test(text)) { inFares = true; continue; }
+    if (inFares) { fares.push(line); continue; }
+    if (/^(saindo de|sentido)\s/.test(text)) {
+      direction = { name: line, schedules: {}, stops: [] };
+      directions.push(direction); days = []; continue;
+    }
+    if (!direction) continue;
+    const heading = text.match(/^(segunda(?:-feira)?\s+a\s+sexta(?:-feira)?|sabado|domingo(?:\s*(?:e|\/)\s*feriado)?|feriado)\s*:?\s*/);
+    if (heading) {
+      const name = heading[1];
+      days = name.startsWith('segunda') ? ['weekday'] : name === 'sabado' ? ['sat'] : name.includes('domingo') ? (name.includes('feriado') ? ['sun', 'holiday'] : ['sun']) : ['holiday'];
+      days.forEach(day => { direction.schedules[day] = []; });
+      const rest = text.slice(heading[0].length);
+      if (rest) days.forEach(day => direction.schedules[day].push(rest));
+      continue;
+    }
+    if (days.length && (/\d\s*(?:h|:)/i.test(line) || /a cada|nao\s+(?:opera|roda)/.test(text))) {
+      days.forEach(day => direction.schedules[day].push(line));
+    } else { days = []; direction.stops.push(line); }
+  }
+  return { directions, fares };
+}
+function readMinute(hours, minutes = '0') {
+  const h = Number(hours), m = Number(minutes || 0);
+  return Number.isInteger(h) && Number.isInteger(m) && h >= 0 && h < 24 && m >= 0 && m < 60 ? h * 60 + m : null;
+}
+function expandSchedule(lines) {
+  if (!lines) return { state: 'missing', departures: [], issues: [] };
+  if (lines.some(line => /nao\s+(?:opera|roda)/.test(normalize(line)))) return { state: 'closed', departures: [], issues: [] };
+  const byMinute = new Map(), issues = [];
+  let lastSequenceMinute = -1;
+  const add = (minute, estimated, uncertainDay = false) => {
+    const key = minute % 1440;
+    const previous = byMinute.get(key);
+    byMinute.set(key, { minute: key, time: clockLabel(key), estimated: previous ? previous.estimated && estimated : estimated, uncertainDay: previous ? previous.uncertainDay && uncertainDay : uncertainDay });
+  };
+  for (let i = 0; i < lines.length; i++) {
+    const text = normalize(lines[i]);
+    const range = text.match(/^(\d{1,2})(?::|h)(\d{2})?\s+as\s+(\d{1,2})(?::|h)(\d{2})?\s*$/);
+    if (range) {
+      const frequency = normalize(lines[i + 1] || '').match(/^\(?a cada\s*(\d+)\s*(?:min(?:utos)?|mim)\s*\)?$/);
+      const start = readMinute(range[1], range[2]), finish = readMinute(range[3], range[4]);
+      const interval = frequency ? Number(frequency[1]) : 0;
+      if (start === null || finish === null || interval <= 0 || interval > 1440) { issues.push(lines[i]); continue; }
+      const end = finish < start ? finish + 1440 : finish;
+      for (let minute = start; minute <= end; minute += interval) add(minute, true, minute >= 1440);
+      lastSequenceMinute = end;
+      i++; continue;
+    }
+    const fixed = text.match(/^(\d{1,2})(?::|h)(\d{2})?$/);
+    if (fixed) {
+      const minute = readMinute(fixed[1], fixed[2]);
+      if (minute !== null) { add(minute, false, minute < 360 && lastSequenceMinute >= 1080 && minute < lastSequenceMinute); lastSequenceMinute = minute; } else issues.push(lines[i]);
+    } else issues.push(lines[i]);
+  }
+  const departures = [...byMinute.values()].sort((a, b) => a.minute - b.minute);
+  return { state: departures.length ? 'open' : 'missing', departures, issues };
+}
+function currentClock(date = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(date);
+  const get = type => parts.find(part => part.type === type).value;
+  return { minute: Number(get('hour')) * 60 + Number(get('minute')), day: get('weekday') === 'Sat' ? 'sat' : get('weekday') === 'Sun' ? 'sun' : 'weekday' };
+}
+function nextDeparture(departures, minute) { return departures.find(item => !item.uncertainDay && item.minute >= minute) || null; }
+function filterDepartures(departures, period, upcoming, minute) {
+  return departures.filter(item => (!upcoming || (!item.uncertainDay && item.minute >= minute)) && (period === 'all' || (period === 'dawn' ? item.minute < 360 : period === 'morning' ? item.minute >= 360 && item.minute < 720 : period === 'afternoon' ? item.minute >= 720 && item.minute < 1080 : item.minute >= 1080)));
+}
+
+function validateRoutes(routes, previous = []) {
+  if (!Array.isArray(routes) || !routes.length || routes.length > 100 || new Set(routes.map(r => r.id)).size !== routes.length) throw Error('Linhas ausentes ou duplicadas');
+  for (const route of routes) {
+    if (typeof route.name !== 'string' || !route.name || !Array.isArray(route.lines)) throw Error('Linha incompleta');
+    const { directions, fares } = splitRoute(route);
+    if (directions.length < 2 || !fares.length || fares.some(f => !/R\$\s*[\d\s]+,\d{2}/.test(f))) throw Error('Sentidos ou tarifas incompletos: ' + route.id);
+    for (const dir of directions) {
+      if (!dir.stops.length || !dir.schedules.weekday || !dir.schedules.sat || !dir.schedules.sun) throw Error('Itinerário ou dias incompletos: ' + route.id);
+      for (const lines of Object.values(dir.schedules)) {
+        const program = expandSchedule(lines);
+        if (program.issues.length || program.state === 'missing') throw Error('Programação não reconhecida: ' + route.id);
+        if (program.state === 'closed' && lines.some(l => /\d\s*(?:h|:)/i.test(l))) throw Error('Programação contraditória: ' + route.id);
+      }
+    }
+    const old = previous.find(r => routeId(r) === route.id);
+    if (old && fares.length < splitRoute(old).fares.length / 2) throw Error('Redução inesperada de tarifas: ' + route.id);
+  }
+  if (previous.some(r => !routes.some(candidate => candidate.id === routeId(r)))) throw Error('Linha removida da fonte: requer revisão antes de substituir a cópia');
+  return routes;
+}
+
+
+'use strict';
+const APP_ORIGIN = 'https://macaense-horarios-elson.cosmiccrab16.chatgpt.site';
+const $ = id => document.getElementById(id);
+const escapeText = value => String(value).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+const storage = { get(key, fallback) { try { const value = localStorage.getItem(key); return value === null ? fallback : JSON.parse(value); } catch { return fallback; } }, set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} } };
+let routes = [], selected = null, onlyFavorites = false, loading = false, lastFetched = 0, activeData = null;
+let favorites = storage.get('bus-favorites', []); if (!Array.isArray(favorites)) favorites = [];
+let lastSelection = storage.get('bus-last-selection', null);
+const validDays = ['today','weekday','sat','sun','holiday'];
+const params = new URLSearchParams(location.search);
+let hash = ''; try { hash = decodeURIComponent(location.hash.slice(1)); } catch {}
+const deepLink = { id:params.get('linha') || hash, direction:params.get('sentido'), day:params.get('dia') };
+function validData(data) { return data && Array.isArray(data.routes) && data.routes.length > 0 && data.routes.every(route => typeof route.name === 'string' && typeof route.id === 'string' && Array.isArray(route.lines) && route.lines.every(line => typeof line === 'string')) && Number.isFinite(Date.parse(data.checkedAt)); }
+function migrateFavorites() {
+  const legacy = storage.get('bus-favorites-migrated-v3', false) ? [] : storage.get('macaense-favs-v1', []);
+  const ids = [...favorites, ...(Array.isArray(legacy) ? legacy : [])];
+  favorites = [...new Set(ids.map(value => routes.find(r => r.id === value || r.name === value)?.id || value))];
+  storage.set('bus-favorites', favorites);
+  storage.set('bus-favorites-migrated-v3', true);
+}
+function saveSelection() {
+  if (selected) {
+    lastSelection = { id:selected.id, name:selected.name, direction:$('direction').selectedOptions[0]?.textContent };
+    storage.set('bus-last-selection', lastSelection);
+    try { const url = new URL(location.href); url.searchParams.set('linha', selected.id); url.searchParams.set('sentido', $('direction').value); url.searchParams.set('dia', $('day').value); url.hash = ''; history.replaceState(null, '', url); } catch {}
+  }
+}
+function showStatus(data, fromDevice = false) {
+  const age = Date.now() - Date.parse(data.checkedAt);
+  const label = new Date(data.checkedAt).toLocaleString('pt-BR', { timeZone:'America/Sao_Paulo', dateStyle:'short', timeStyle:'short' });
+  const prefix = fromDevice ? 'Cópia offline deste aparelho · ' : data.live ? 'Dados verificados · ' : 'Última cópia disponível · ';
+  $('status').textContent = prefix + label + ' (Brasília)' + (age > 28*3600000 ? ' · Verificação pendente.' : '.');
+  $('status').classList.toggle('warn', !data.live || fromDevice);
+  const job = data.job;
+  $('update-status').textContent = job?.ok === false ? 'A última atualização diária falhou. A cópia válida foi preservada.' : job?.ok === true ? (job.changed ? 'Atualização diária concluída com alterações em ' + (job.changedRoutes || []).join(', ') + '.' : 'Última atualização diária: programação conferida, sem alterações.') : 'A programação diária é conferida pela rotina de atualização.';
+}
+function renderList() {
+  const tokens = normalize($('search').value).split(' ').filter(Boolean);
+  const found = routes.filter(route => (!onlyFavorites || favorites.includes(route.id)) && tokens.every(token => normalize(route.name + ' ' + route.lines.join(' ')).includes(token)));
+  $('result-count').textContent = found.length + (found.length === 1 ? ' linha encontrada' : ' linhas encontradas');
+  $('routes').innerHTML = found.length ? found.map(route => '<button type="button" class="route ' + (selected?.id === route.id ? 'selected' : '') + '" data-id="' + escapeText(route.id) + '" aria-pressed="' + (selected?.id === route.id) + '"><b class="num">' + escapeText(route.id === 'SELETIVO' ? 'SEL' : route.id) + '</b><span>' + escapeText(route.name.replace(/^B\d+ - /, '')) + '<small>' + (favorites.includes(route.id) ? '★ Favorita' : 'Ver saídas, trajeto e tarifas') + '</small></span></button>').join('') : '<p class="empty">' + (onlyFavorites ? 'Nenhuma favorita para esta busca. Abra uma linha e toque na estrela para salvar.' : 'Nenhuma linha encontrada. Tente outra cidade ou código.') + '</p>';
+}
+function selectRoute(id, directionName = null, focus = false, preserve = false) {
+  selected = routes.find(route => route.id === id); if (!selected) return;
+  const { directions } = splitRoute(selected);
+  $('detail').hidden = false; $('title').textContent = selected.name;
+  const oldIndex = $('direction').value;
+  $('direction').innerHTML = directions.map((direction, index) => '<option value="' + index + '">' + escapeText(direction.name) + '</option>').join('');
+  if (directionName) { const index = directions.findIndex(direction => normalize(direction.name) === normalize(directionName)); if (index >= 0) $('direction').value = String(index); }
+  else if (preserve && directions[Number(oldIndex)]) $('direction').value = oldIndex;
+  if (!preserve) $('period').value = 'all';
+  renderDetail(); renderList(); saveSelection();
+  if (focus) { $('detail').scrollIntoView({ behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block:'start' }); $('title').focus({ preventScroll:true }); }
+}
+function renderNext(program, isToday, clock) {
+  $('clock').textContent = isToday ? 'Agora: ' + clockLabel(clock.minute) + ' · Brasília' : '';
+  if (!isToday) { const first = nextDeparture(program.departures, 0); $('next-label').textContent = 'PLANEJE SUA VIAGEM'; $('next-time').textContent = first?.time || '—'; $('next-desc').textContent = first ? 'Primeira saída da programação selecionada.' + (first.estimated ? ' Estimativa calculada da frequência.' : '') : 'Consulte os horários do dia selecionado abaixo.'; return; }
+  const next = nextDeparture(program.departures, clock.minute);
+  $('next-label').textContent = next?.estimated ? 'PRÓXIMA SAÍDA ESTIMADA' : 'PRÓXIMA SAÍDA PROGRAMADA'; $('next-time').textContent = next?.time || '—';
+  $('next-desc').textContent = next ? (next.minute === clock.minute ? 'Prevista para agora.' : (next.estimated ? 'Em cerca de ' : 'Daqui a ') + (next.minute - clock.minute) + ' min.') + (next.estimated ? ' Calculada da frequência divulgada.' : ' Horário fixo publicado pela empresa.') : (program.state === 'closed' ? 'Esta linha não opera no dia selecionado.' : program.departures.length ? 'Não há outras saídas indicadas para hoje. Confira outro dia.' : 'A fonte não informou horários para este dia.');
+}
+function renderDetail() {
+  if (!selected) return;
+  const { directions, fares } = splitRoute(selected), direction = directions[Number($('direction').value)];
+  const favorite = favorites.includes(selected.id);
+  $('star').textContent = favorite ? '★' : '☆'; $('star').setAttribute('aria-pressed', String(favorite)); $('star').setAttribute('aria-label', favorite ? 'Remover linha das favoritas' : 'Favoritar linha');
+  $('stops').innerHTML = direction?.stops.length ? direction.stops.map(stop => '<li>' + escapeText(stop) + '</li>').join('') : '<li>Itinerário não informado.</li>';
+  $('fares').innerHTML = fares.length ? fares.map(fare => '<li>' + escapeText(fare.replace(/R\$\s*([\d\s]+,\d{2})/g, (_, amount) => 'R$ ' + amount.replace(/\s/g, ''))) + '</li>').join('') : '<li>Tarifas não informadas.</li>';
+  const clock = currentClock(), day = $('day').value === 'today' ? clock.day : $('day').value;
+  const todayOption = $('day').options[0]; if (todayOption) todayOption.textContent = 'Hoje · ' + ({ weekday:'dia útil', sat:'sábado', sun:'domingo' }[clock.day]);
+  const program = expandSchedule(direction?.schedules[day]);
+  const isToday = $('day').value === 'today' || $('day').value === clock.day;
+  $('upcoming').disabled = !isToday; if (!isToday) $('upcoming').checked = false;
+  renderNext(program, isToday, clock);
+  $('total-count').textContent = program.departures.length ? program.departures.length + ' horários no dia' : '';
+  const next = isToday ? nextDeparture(program.departures, clock.minute) : null;
+  const visible = filterDepartures(program.departures, $('period').value, isToday && $('upcoming').checked, clock.minute);
+  if (program.state === 'closed') $('schedule').innerHTML = '<p class="empty">Sem operação neste dia, conforme a fonte.</p>';
+  else if (program.state === 'missing') $('schedule').innerHTML = '<p class="empty">A empresa não informou horários para este tipo de dia. Confirme no site oficial.</p>';
+  else if (!visible.length) $('schedule').innerHTML = '<p class="empty">Nenhuma saída neste filtro. Escolha outro período ou toque em “Limpar filtros”.</p>';
+  else $('schedule').innerHTML = '<div class="times" role="list" aria-label="Horários individuais de saída">' + visible.map(item => '<div role="listitem" class="time ' + (item.uncertainDay ? 'ambiguous' : next?.minute === item.minute ? 'next' : isToday && item.minute < clock.minute ? 'past' : '') + '"><strong>' + item.time + '</strong><small>' + (item.uncertainDay ? 'Dia a confirmar' : (next?.minute === item.minute ? 'Próxima · ' : '') + (item.estimated ? 'Calculado' : 'Publicado')) + '</small></div>').join('') + '</div>';
+  const notices = [];
+  if (program.departures.some(item => item.estimated)) notices.push('“Calculado” indica uma estimativa obtida a partir do início de cada faixa e da frequência publicada. Pode diferir da partida real.');
+  const ambiguous = program.departures.filter(item => item.uncertainDay);
+  if (ambiguous.length) notices.push('Madrugada: ' + ambiguous.map(item => item.time).join(', ') + ' aparece após horários noturnos na fonte, sem esclarecer o dia civil. Confirme com a empresa; não entra na próxima saída.');
+  if (program.issues.length) notices.push('Parte da programação não pôde ser convertida. Confira a fonte oficial.');
+  if (fares.some(fare => /R\$\s*\d\s+\d/.test(fare))) notices.push('O espaçamento irregular da tarifa R$1 6,35 foi normalizado para R$ 16,35.');
+  $('schedule-note').hidden = !notices.length; $('schedule-note').textContent = notices.join(' '); $('legend').hidden = !program.departures.length;
+  $('raw-schedule').innerHTML = (direction?.schedules[day] || []).map(line => '<li>' + escapeText(line) + '</li>').join('') || '<li>Programação não informada para este dia.</li>';
+}
+function applyData(data) {
+  const preferred = selected ? { id:selected.id, name:selected.name, direction:$('direction').selectedOptions[0]?.textContent } : lastSelection;
+  routes = data.routes.map(route => ({ ...route, id:routeId(route) })); activeData = data; migrateFavorites();
+  if (preferred) { const route = routes.find(item => item.id === preferred.id || item.name === preferred.name); if (route) selectRoute(route.id, preferred.direction, false, true); else { selected = null; $('detail').hidden = true; } }
+  if (!selected && routes.length) selectRoute(routes[0].id);
+  renderList();
+}
+async function loadData(force = false) {
+  if (loading) return; loading = true; $('refresh').disabled = true; $('refresh').textContent = 'Consultando…';
+  try {
+    const response = await fetch(APP_ORIGIN + '/api/horarios' + (force ? '?refresh=1' : ''), { cache:'no-store', signal:AbortSignal.timeout(35000) });
+    if (!response.ok) throw Error('Consulta indisponível'); const data = await response.json(); if (!validData(data)) throw Error('Dados incompletos');
+    const current = storage.get('bus-data', null);
+    if (validData(current) && Date.parse(current.checkedAt) > Date.parse(data.checkedAt)) { applyData(current); showStatus(current, true); }
+    else { applyData(data); showStatus(data); storage.set('bus-data', data); }
+    lastFetched = Date.now();
+  } catch {
+    const saved = storage.get('bus-data', null);
+    if (validData(saved)) { applyData(saved); showStatus(saved, true); }
+    else if (activeData) showStatus(activeData, true);
+    else { $('status').textContent = 'Não foi possível atualizar. Tente novamente ou consulte a fonte oficial.'; $('status').classList.add('warn'); }
+  } finally { loading = false; $('refresh').disabled = false; $('refresh').textContent = '↻ Atualizar consulta'; }
+}
+function changeList(favoritesOnly) { onlyFavorites = favoritesOnly; $('all').classList.toggle('active', !favoritesOnly); $('favs').classList.toggle('active', favoritesOnly); $('all').setAttribute('aria-pressed', String(!favoritesOnly)); $('favs').setAttribute('aria-pressed', String(favoritesOnly)); renderList(); }
+function toast(text) { $('toast').textContent = text; }
+$('search').oninput = renderList;
+$('routes').onclick = event => { const button = event.target.closest('[data-id]'); if (button) selectRoute(button.dataset.id, null, true); };
+$('all').onclick = () => changeList(false); $('favs').onclick = () => changeList(true);
+$('star').onclick = () => { if (!selected) return; favorites = favorites.includes(selected.id) ? favorites.filter(id => id !== selected.id) : [...favorites, selected.id]; storage.set('bus-favorites', favorites); renderDetail(); renderList(); };
+$('direction').onchange = () => { renderDetail(); saveSelection(); };
+$('day').onchange = () => { renderDetail(); saveSelection(); };
+$('period').onchange = renderDetail; $('upcoming').onchange = renderDetail; $('refresh').onclick = () => loadData(true);
+$('clear-filters').onclick = () => { $('period').value = 'all'; $('upcoming').checked = false; renderDetail(); };
+$('reverse').onclick = () => { if (!selected) return; $('direction').value = String((Number($('direction').value) + 1) % splitRoute(selected).directions.length); renderDetail(); saveSelection(); };
+$('share').onclick = async () => {
+  if (!selected) return;
+  const url = new URL(APP_ORIGIN); url.searchParams.set('linha', selected.id); url.searchParams.set('sentido', $('direction').value); url.searchParams.set('dia', $('day').value);
+  try { if (navigator.share) await navigator.share({ title:'Meu Ônibus · ' + selected.name, url:url.href }); else if (navigator.clipboard?.writeText) { await navigator.clipboard.writeText(url.href); toast('Link desta consulta copiado.'); } else { toast('Link desta consulta: ' + url.href); } } catch (error) { if (error?.name !== 'AbortError') toast('Link desta consulta: ' + url.href); }
+};
+$('day').value = validDays.includes(deepLink.day) ? deepLink.day : 'today';
+const embedded = JSON.parse($('embedded-data').textContent), saved = storage.get('bus-data', null);
+const initial = validData(saved) && Date.parse(saved.checkedAt) > Date.parse(embedded.checkedAt) ? saved : embedded;
+if (validData(initial)) { applyData(initial); showStatus(initial, !navigator.onLine); }
+if (deepLink.id) { const route = routes.find(r => r.id === deepLink.id); if (route) { selectRoute(route.id); if (splitRoute(route).directions[Number(deepLink.direction)] && deepLink.direction !== null) $('direction').value = String(Number(deepLink.direction)); renderDetail(); saveSelection(); } }
+loadData();
+setInterval(() => { if (!document.hidden) { renderDetail(); if (Date.now() - lastFetched > 10 * 60 * 1000) loadData(); } }, 30000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) { renderDetail(); loadData(); } });
+window.addEventListener('online', () => loadData());
+window.addEventListener('offline', () => { if (activeData) showStatus(activeData, true); });
+if ('serviceWorker' in navigator && location.origin === APP_ORIGIN) navigator.serviceWorker.register('/sw.js').catch(() => {});
+let installEvent = null;
+window.addEventListener('beforeinstallprompt', event => { event.preventDefault(); installEvent = event; $('install').hidden = false; });
+$('install').onclick = async () => { if (installEvent) { await installEvent.prompt(); installEvent = null; $('install').hidden = true; } };
+
+</script>
+</body></html>
